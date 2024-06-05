@@ -49,5 +49,54 @@ Editora.
 > [nodemon] watching extensions: js,mjs,cjs,json
 > [nodemon] starting `node server.js`
 > Servidor escutando !```
+
+> 6. Instalação do Mongoose (Biblioteca intermediária para conexões entre a App e o MongoDB)
+>
+> `npm install mongoose@7.3.4`
+>
+> 7. Install a bibliteca dotenv para configurar variáveis de ambiente e não subir senhas para o git ao realizer commit do código.
+>
+> `npm install dotenv`
 >
 >
+
+
+
+
+db.createUser({
+    user: 'adminbook',
+    pwd: 'mongoadmin',
+    roles: [{ role: 'readWrite', db:'cool_db'}]
+})
+
+
+
+https://www.bigscal.com/blogs/backend/how-to-setup-node-js-with-mongodb-using-docker/
+
+
+PS:  para usar os métodos GET na pesquisa utilizar ? após a URL base, por example:
+
+localhost:3000/livros/buscaall?editora=USA
+
+
+# Install swagger
+
+npm install swagger-jsdoc swagger-ui-express express
+
+
+
+
+
+# Vulnerabilities
+
+Executar e comando abaixo e verificar se existe algumas vulnerabilidade:
+
+`npm audit`
+
+se for entrado alguma executar o comando de fix para resolver:
+
+`npm audit fix`
+
+
+
+localhost:3000/livros/buscaall?editora=USA
