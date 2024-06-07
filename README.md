@@ -31,7 +31,9 @@ https://docs.docker.com/engine/install/
 
 `docker compose down`
 
+5. Link para download e instalação do Postman:
 
+https://www.postman.com/downloads/
 
 
 
