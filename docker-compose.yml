@@ -1,0 +1,64 @@
+# Docker Compose file para MongoDB e Mongo Express
+version: '3.8'
+
+services:
+
+  node-backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - PATH_TO_CODE=./
+        - NODE_ENV=development
+        - PORT=3000
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "------------------ NODEMON --------------------"
+        npm run dev 
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/:/opt/node_app/app/src
+      - ./server.js:/opt/node_app/app/server.js
+      - ./package.json:/opt/node_app/package.json
+    env_file:
+      - .env
+    depends_on:
+      - mongo 
+    networks:
+      - mongo-compose-network
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: mongoadmin
+    ports:
+      - 27017:27017  
+    networks:
+      - mongo-compose-network
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: admin
+      ME_CONFIG_MONGODB_URL: mongodb://admin:mongoadmin@mongo:27017/
+      ME_CONFIG_BASICAUTH: false
+    networks:
+      - mongo-compose-network
+
+networks:
+  mongo-compose-network:
+    name: mongo-compose-network  
+    driver: bridge      
+
+volumes:
+  dbdata:
+  node_modules:  
