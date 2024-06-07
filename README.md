@@ -82,4 +82,4 @@ http://localhost:4000/api-docs/#/
 
 ### **PS:**  para usar os métodos GET na pesquisa utilizar ? após a URL base, por examplo:
 
-localhost:3000/livros/buscaall?editora=USA
+http://localhost:3000/livros/buscaall?editora=USA
