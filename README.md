@@ -23,6 +23,10 @@ https://docs.docker.com/engine/install/
 
 `docker compose up -d`
 
+3. Criar o arquivo .env dentro do projeto com as seguinte informação:
+
+`DB_CONNECTION_STRING=mongodb://admin:mongoadmin@mongo:27017/livraria?authSource=admin`
+
 3. Executar o comando abaixo para subir o projeto Node assim como os Servidores:
 
 `npm run dev`
