@@ -5,13 +5,19 @@
 Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que realiza um CRUD (CREATE, READ, UPDATE e DELETE) no gerenciamento de livros, tendo como atribuitos necessários:
 
 Id.
+
 Nome. 
+
 Autor.
+
 Editora.
 
 
 ## Passos para executar o Projeto em ambiente de Desenvolvimento
 
+
+
+## Passos para Configurar/Manter o Projeto em ambiente de Desenvolvimento
 > ### Pré Requisitos
 >
 > **Projeto foi Desenvolvido utilizando VSCODE, MongoDB em Docker e Postman**
@@ -20,17 +26,17 @@ Editora.
 > 
 > `npm init -y`
 >
-> 2. Valide se o arquivo **package.json** foi criado e adicione abaixo de "main" a seguinte string:
+> 2. Valide se o arquivo **package.json** foi criado e adicione abaixo de "main" adicione a seguinte string:
 >
 > `"type": "module"`
 >
-> 3. Install o Express ("Framework web rápido, flexível e minimalista para Node.js")
+> 3. Instale o Express ("Framework web rápido, flexível e minimalista para Node.js") executando o comando abaixo:
 >
 > `npm install express@4.18.1`
 >
-> 4. Criar um arquivo server.js para simular um servidor HTTP e após executar validar o output, assim como, via browser através do link: http://localhost:3000
+> 4. Criar um arquivo server.js para simular um servidor HTTP e após executá-lo validar o output, assim como, pode ser verifcado via web browser: http://localhost:3000
 >
-> 5. Para fazer Refresh no Server após alterações utilizado o utilitário nodemon que pode ser instalado com o comando abaixo:
+> 5. Executar o comando abaixo para fazer Refresh no Server após alterações utilizado o utilitário nodemon:
 >
 > `npm install nodemon@3.0.1`
 > 
@@ -58,45 +64,22 @@ Editora.
 >
 > `npm install dotenv`
 >
+> 8. Instalar o Swagger para realizar a documentação das APIs:
 >
+> `npm install swagger-jsdoc swagger-ui-express express`
+>
+> 9. Executar e comando abaixo e verificar se existe algumas vulnerabilidade:
+>
+> `npm audit`
+>
+> 10. Executar o comando abaixo para vulnerabilidades se por acaso o step 9 trouxer:
+>
+> `npm audit fix`
 
 
+### Swagger URL
+http://localhost:4000/api-docs/#/
 
-
-db.createUser({
-    user: 'adminbook',
-    pwd: 'mongoadmin',
-    roles: [{ role: 'readWrite', db:'cool_db'}]
-})
-
-
-
-https://www.bigscal.com/blogs/backend/how-to-setup-node-js-with-mongodb-using-docker/
-
-
-PS:  para usar os métodos GET na pesquisa utilizar ? após a URL base, por example:
-
-localhost:3000/livros/buscaall?editora=USA
-
-
-# Install swagger
-
-npm install swagger-jsdoc swagger-ui-express express
-
-
-
-
-
-# Vulnerabilities
-
-Executar e comando abaixo e verificar se existe algumas vulnerabilidade:
-
-`npm audit`
-
-se for entrado alguma executar o comando de fix para resolver:
-
-`npm audit fix`
-
-
+### **PS:**  para usar os métodos GET na pesquisa utilizar ? após a URL base, por examplo:
 
 localhost:3000/livros/buscaall?editora=USA

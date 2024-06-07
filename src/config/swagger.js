@@ -8,7 +8,7 @@ const options = {
     info: {
       title: 'Fase 2 - TECH CHALLENGE - Biblioteca API',
       version: '1.0.0',
-      description: 'API documentation for your Node.js application',
+      description: 'Documentação de APIs Referente ao Projeto Biblioteca',
     },
   },
   apis: ['./src/routes/*.js'], // Path to the API routes
@@ -16,3 +16,4 @@ const options = {
 const swaggerSpec = swaggerJSDoc(options);
 
 export default swaggerSpec;
+

@@ -7,77 +7,77 @@ const routes = express.Router();
  * @swagger
  * /livros:
  *   get:
- *     summary: Get a list of users
- *     description: Retrieve a list of users from the database.
+ *     summary: Retorna uma lista de livros
+ *     description: Retorna uma lista de livros do banco de dados.
  *     responses:
  *       200:
- *         description: Successful response with a list of users.
+ *         description: Resposta obtida com sucesso.
  */
 routes.get("/livros", LivroController.listarLivros);
 /**
  * @swagger
  * /livros/buscaall:
  *   get:
- *     summary: Get a list of users
- *     description: Retrieve a list of users from the database.
+ *     summary: Retorna uma lista de livros por consulta
+ *     description: Retorbna uma lista de livros do banco de dados por consulta.
  *     responses:
  *       200:
- *         description: Successful response with a list of users.
+ *         description: Resposta obtida com sucesso.
  */
 routes.get("/livros/buscaall", LivroController.listarLivrosPorQuery);
 /**
  * @swagger
  * /livros/busca:
  *   get:
- *     summary: Get a list of users
- *     description: Retrieve a list of users from the database.
+ *     summary: Retorna uma lista de livros por editora
+ *     description: Retorna uma lista de livros do banco de dados por editora.
  *     responses:
  *       200:
- *         description: Successful response with a list of users.
+ *         description: Resposta obtida com sucesso.
  */
 routes.get("/livros/busca", LivroController.listarLivrosPorEditora);
 /**
  * @swagger
  * /livros/:id:
  *   get:
- *     summary: Get a list of users
- *     description: Retrieve a list of users from the database.
+ *     summary: Retorna uma lista de livros por ID
+ *     description: Retorna uma lista de livros do banco de dados por ID.
  *     responses:
  *       200:
- *         description: Successful response with a list of users.
+ *         description: Resposta obtida com sucesso.
  */
 routes.get("/livros/:id", LivroController.listarLivroPorId);
 /**
  * @swagger
  * /livros:
  *   post:
- *     summary: Get a list of users
- *     description: Retrieve a list of users from the database.
+ *     summary: Post realiza o cadastro de um livro
+ *     description: Realiza o cadastro de um livro no banco de dados.
  *     responses:
  *       200:
- *         description: Successful response with a list of users.
+ *         description: Resposta obtida com sucesso.
  */
 routes.post("/livros", LivroController.cadastrarLivro);
 /**
  * @swagger
  * /livros/:id:
  *   put:
- *     summary: Get a list of users
- *     description: Retrieve a list of users from the database.
+ *     summary: Put Atualiza um livro
+ *     description: Atualiza um livro no banco de dados.
  *     responses:
  *       200:
- *         description: Successful response with a list of users.
+ *         description: Resposta obtida com sucesso.
  */
 routes.put("/livros/:id", LivroController.atualizarLivro);
 /**
  * @swagger
  * /livros/:id:
  *   delete:
- *     summary: Get a list of users
- *     description: Retrieve a list of users from the database.
+ *     summary: Delete exclui um livro
+ *     description: Exclui um livro no banco de dados.
  *     responses:
  *       200:
- *         description: Successful response with a list of users.
+ *         description: Resposta obtida com sucesso.
  */
 routes.delete("/livros/:id", LivroController.excluirLivro);
 

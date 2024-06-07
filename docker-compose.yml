@@ -1,4 +1,4 @@
-# Use root/example as user/password credentials
+# Docker Compose file para MongoDB e Mongo Express
 version: '3.8'
 
 services:
@@ -31,38 +31,3 @@ networks:
   mongo-compose-network:
     name: mongo-compose-network  
     driver: bridge      
-
-
-# version: '3.1'
-
-# services:
-#   mongo-express:
-#     image: mongo-express
-#     restart: always
-#     ports:
-#       - 8081:8081
-#     environment:
-#       ME_CONFIG_MONGODB_URL: mongodb://admin:mongoadmin@mongo:27017/
-#       ME_CONFIG_MONGODB_PORT: 27017
-#       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-#       ME_CONFIG_MONGODB_ADMINPASSWORD: adminmongo
-#       ME_CONFIG_BASICAUTH_USERNAME: admin
-#       ME_CONFIG_BASICAUTH_PASSWORD: adminmongo
-#       ME_CONFIG_BASICAUTH: false
-
-#   mongo:
-#     image: mongo
-#     restart: always
-#     environment:
-#       MONGO_INITDB_ROOT_USERNAME: admin
-#       MONGO_INITDB_ROOT_PASSWORD: adminmongo
-#     ports:
-#       - "27017:27017"
-#     volumes:
-#       - /Users/pgpr/Development/github/docker/mongodb:/data/db
-#     networks:
-#       - mongo-compose-network
-
-# networks: 
-#     mongo-compose-network:
-#       driver: bridge
