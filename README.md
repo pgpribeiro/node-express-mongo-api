@@ -4,16 +4,34 @@
 
 Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que realiza um CRUD (CREATE, READ, UPDATE e DELETE) no gerenciamento de livros, tendo como atribuitos necessários:
 
-Id.
+**Id.**
 
-Nome. 
+**Nome.**
 
-Autor.
+**Autor.**
 
-Editora.
+**Editora.**
 
 
 ## Passos para executar o Projeto em ambiente de Desenvolvimento
+
+1. Instalar o Docker Engine para utilização do Banco de Dados MongoDB e MongoExpress definidos no arquivo `docker-compose.yml`, segue link abaixo para download:
+
+https://docs.docker.com/engine/install/
+
+2. Após ter docker desktop instalado com sucesso, executar o comando abaixo para inicializar os containers Mongo:
+
+`docker compose up -d`
+
+3. Executar o comando abaixo para subir o projeto Node assim como os Servidores:
+
+`npm run dev`
+
+4. comando para Parar os Containers:
+
+`docker compose down`
+
+
 
 
 
