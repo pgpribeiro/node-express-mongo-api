@@ -4,13 +4,13 @@
 
 Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que realiza um CRUD (CREATE, READ, UPDATE e DELETE) no gerenciamento de livros, tendo como atribuitos necessários:
 
-**Id.**
+    **Id.**
 
-**Nome.**
+    **Nome.**
 
-**Autor.**
+    **Autor.**
 
-**Editora.**
+    **Editora.**
 
 
 ## Passos para executar o Projeto em ambiente de Desenvolvimento
@@ -25,7 +25,7 @@ Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que r
 
     https://docs.docker.com/engine/install/
 
-4. Adicinar o arquivo .env dentro da Pasta: src com as seguintes informações:
+4. Adicinar o arquivo **.env** dentro da Pasta: **src** com as seguintes informações:
 
    `DB_CONNECTION_STRING=mongodb://admin:mongoadmin@mongo:27017/livraria?authSource=admin`
 
@@ -101,7 +101,11 @@ http://localhost:3000/livros/buscaall?editora=USA
 -----------------------
 -----------------------
 -----------------------
+-----------------------
 
+
+
+# Esses Steps não são necessários para rodar o projeto em Ambiente Desenvolvimento, mas deixamos salvos pois foram necessário durante o processo de Desenvolvimento do Projeto e podem servir como para futuras consultas.
 
 ###  Comandos utilizados durante o Desenvolvimento do Projeto (Somente Informação)
 
@@ -109,23 +113,45 @@ http://localhost:3000/livros/buscaall?editora=USA
 >
 > **Projeto foi Desenvolvido utilizando VSCODE, MongoDB em Docker e Postman**
 >
+>
+>
+> 0. Instalação do NODE através do link:
+>
+>    `https://nodejs.org/en/download/package-manager`
+> 
+>   **Exemplo_MACOS**
+>   ```
+>   # installs nvm (Node Version Manager)
+>   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+>   
+>   # download and install Node.js (you may need to restart the terminal)
+>   nvm install 20
+>   
+>   # verifies the right Node.js version is in the environment
+>   node -v # should print `v20.14.0`
+>   
+>   # verifies the right NPM version is in the environment
+>   npm -v # should print `10.7.0`
+>   ``` 
+>
+>
 > 1.  Abra um terminal e execute o comando abaixo para criar um projeto JS
 > 
-> `npm init -y`
+>     `npm init -y`
 >
 > 2. Valide se o arquivo **package.json** foi criado e adicione abaixo de "main" adicione a seguinte string:
 >
-> `"type": "module"`
+>    `"type": "module"`
 >
 > 3. Instale o Express ("Framework web rápido, flexível e minimalista para Node.js") executando o comando abaixo:
 >
-> `npm install express@4.18.1`
+>    `npm install express@4.18.1`
 >
 > 4. Criar um arquivo server.js para simular um servidor HTTP e após executá-lo validar o output, assim como, pode ser verifcado via web browser: http://localhost:3000
 >
 > 5. Executar o comando abaixo para fazer Refresh no Server após alterações utilizado o utilitário nodemon:
 >
-> `npm install nodemon@3.0.1`
+>    `npm install nodemon@3.0.1`
 > 
 > alterar novamente o arquivo package.json para utilizar nodemon adicionando em scripts a sequinte syntaxe:
 >
@@ -145,20 +171,20 @@ http://localhost:3000/livros/buscaall?editora=USA
 
 > 6. Instalação do Mongoose (Biblioteca intermediária para conexões entre a App e o MongoDB)
 >
-> `npm install mongoose@7.3.4`
+>    `npm install mongoose@7.3.4`
 >
 > 7. Install a bibliteca dotenv para configurar variáveis de ambiente e não subir senhas para o git ao realizer commit do código.
 >
-> `npm install dotenv`
+>    `npm install dotenv`
 >
 > 8. Instalar o Swagger para realizar a documentação das APIs:
 >
-> `npm install swagger-jsdoc swagger-ui-express express`
+>    `npm install swagger-jsdoc swagger-ui-express express`
 >
 > 9. Executar e comando abaixo e verificar se existe algumas vulnerabilidade:
 >
-> `npm audit`
+>    `npm audit`
 >
 > 10. Executar o comando abaixo para vulnerabilidades se por acaso o step 9 trouxer:
 >
-> `npm audit fix`
+>    `npm audit fix`
