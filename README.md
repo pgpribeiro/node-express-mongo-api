@@ -27,7 +27,7 @@ Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que r
 
 4. Adicinar o arquivo .env dentro da Pasta: src com as seguintes informações:
 
-  `DB_CONNECTION_STRING=mongodb://admin:mongoadmin@mongo:27017/livraria?authSource=admin`
+   `DB_CONNECTION_STRING=mongodb://admin:mongoadmin@mongo:27017/livraria?authSource=admin`
 
 5. Executar o comando abaixo para inicializar os Containers:
 
@@ -40,9 +40,9 @@ Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que r
 
 ## Utilizando o POSTMAN para validar os API Endpoints com os métodos POST, GET, PUT and DELETE
 
-1. **POST** Cadastrar alguns livros utilizando o método POST:
+1. **POST** Cadastrar alguns livros utilizando o método **POST**:
 
-    1.1. Adicionar o link: http://localhost:3000/livros no postman e em BODY-RAW-JSON colar o seguintes JSONs abaixo para cadastrar livros e clicar em SEND:
+    1.1. Adicionar o link: http://localhost:3000/livros no postman e em BODY-RAW-JSON colar o seguintes JSONs (um de cada vez) abaixo para cadastrar livros e clicar em SEND:
 
 ```b
 {
@@ -73,9 +73,9 @@ Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que r
   "editora" : "Scholastic"
 }
 ```
-2. **GET** Adicionar o link: http://localhost:3000/livros com o método GET para consultar os Livros cadastrados. 
+2. **GET** Adicionar o link: http://localhost:3000/livros com o método **GET** para consultar todos os Livros cadastrados. 
 
-3. **PUT** Adicionar o link: http://localhost:3000/livros/(id_do_livro) substituindo (id_do_livro) pelo ID do livro obtido no método GET. Informar a alteração em formato JSON como o example abaixo:
+3. **PUT** Adicionar o link: http://localhost:3000/livros/(id_do_livro) utilizando método **PUT** para ALTERAR valores do livro, substituindo (id_do_livro) pelo ID do livro obtido no método GET. Informar a alteração em formato JSON (BODY-RAW-JSON ) como o examplo abaixo para alterar **editora**:
 
 ```b 
  {
@@ -83,7 +83,7 @@ Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que r
  }
 ```
 
-4. **DELETE** Adicionar o link: http://localhost:3000/livros/(id_do_livro) substituindo (id_do_livro) pelo ID do livro obtido no método GET para DELETAR o livro.
+4. **DELETE** Adicionar o link: http://localhost:3000/livros/(id_do_livro) utilizando o método **DELETE**, substituindo (id_do_livro) pelo ID do livro obtido no método GET para DELETAR o livro.
 
 ## Parando o Containers
 
