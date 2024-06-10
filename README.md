@@ -21,11 +21,15 @@ Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que r
  
 2. Abrir o Projeto no **VS (Visual Studio Code)** ou em outro Editor de sua preferência.
 
-3. Abrir um Terminal e Instalar o **Docker Engine** para utilização do Banco de Dados MongoDB e MongoExpress, segue link abaixo para download:
+3. Acessar o link abaixo e realizar a instalação do **Docker Engine**  de acordo com seu Sistema Operacional. Será necessário para utilização do Banco de Dados MongoDB e MongoExpress:
 
     https://docs.docker.com/engine/install/
 
-4. Após ter docker desktop instalado com sucesso, executar o comando abaixo para inicializar os Containers:
+4. Adicinar o arquivo .env dentro da Pasta: src com as seguintes informações:
+
+  `DB_CONNECTION_STRING=mongodb://admin:mongoadmin@mongo:27017/livraria?authSource=admin`
+
+5. Executar o comando abaixo para inicializar os Containers:
 
       `docker compose up -d`
 
