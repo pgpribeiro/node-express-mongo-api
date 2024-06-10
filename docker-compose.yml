@@ -19,6 +19,7 @@ services:
         npm run dev 
     ports:
       - "3000:3000"
+      - "4000:4000"
     volumes:
       - ./src/:/opt/node_app/app/src
       - ./server.js:/opt/node_app/app/server.js
