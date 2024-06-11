@@ -25,7 +25,7 @@ Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que r
 
     https://docs.docker.com/engine/install/
 
-4. Adicinar o arquivo **.env** dentro da Pasta: **src** com as seguintes informações:
+4. Adicinar o arquivo **.env** dentro da Pasta: **raiz** com as seguintes informações:
 
    `DB_CONNECTION_STRING=mongodb://admin:mongoadmin@mongo:27017/livraria?authSource=admin`
 
