@@ -4,13 +4,13 @@
 
 Projeto relacionado a criação de uma API com Node.js + Express e MongoDB que realiza um CRUD (CREATE, READ, UPDATE e DELETE) no gerenciamento de livros, tendo como atribuitos necessários:
 
-    **Id.**
+  **Id.**
 
-    **Nome.**
+  **Nome.**
 
-    **Autor.**
+  **Autor.**
 
-    **Editora.**
+  **Editora.**
 
 
 ## Passos para executar o Projeto em ambiente de Desenvolvimento
